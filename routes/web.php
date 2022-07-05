@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('admin.dashboard');
 });
+Route::resource('/rooms', 'RoomControllers');
+Route::resource('/inns', 'InnController');
+Route::resource('/room_rates', 'RoomRatesController');
+Route::resource('/freebies', 'FreebiesController');

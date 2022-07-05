@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Room extends Model
+class RoomRate extends Model
 {
     use HasFactory;
 
-    protected $table = 'rooms';
+    protected $table = 'room_rates';
     public $primaryKey = 'id';
     public $timestamp = true;
 
-    public function inn() {
-        return $this->belongsTo('App\Models\Inn');
+    public function freebie() {
+        return $this->belongsTo('App\Models\Freebie');
     }
-
 }

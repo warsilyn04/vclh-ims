@@ -16,10 +16,9 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->string('room_number');
-            $table->string('room_rate');
             $table->integer('number_of_beds');
-            $table->integer('time_limit');
             $table->integer('status');
+            $table->integer('inn_id');
             $table->timestamps();
         });
     }
